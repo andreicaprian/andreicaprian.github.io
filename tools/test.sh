@@ -10,6 +10,7 @@ DEST=_site
 
 _build=false
 
+
 help() {
   echo "Usage:"
   echo
@@ -55,10 +56,10 @@ while (($#)); do
 done
 
 if $_build; then
-  JEKYLL_ENV=production bundle exec jekyll b
+  JEKYLL_ENV=production bundle2.7 exec jekyll b
 fi
 
-bundle exec htmlproofer "$DEST" \
+bundle2.7 exec htmlproofer "$DEST" \
   --disable-external \
   --check-html \
   --allow_hash_href
