@@ -56,10 +56,10 @@ while (($#)); do
 done
 
 if $_build; then
-  JEKYLL_ENV=production bundle2.7 exec jekyll b
+  JEKYLL_ENV=production bundle exec jekyll b
 fi
 
-bundle2.7 exec htmlproofer "$DEST" \
+bundle exec htmlproofer "$DEST" \
   --disable-external \
   --check-html \
   --allow_hash_href
